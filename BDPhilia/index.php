@@ -1,14 +1,4 @@
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="fr" lang="fr">
-      
-    <head>
-        <meta charset="UTF-8">
-        <meta name="author" content="Pierre">
-        <meta name="content-type" content="='xhtml'">
-        <link href="css.css" rel="stylesheet" type="text/css" media="screen"/>
-        <title>BDPHILIA</title>
-    </head>
-    <body>
-        <?php
+       <?php
         $xmlVersion = '1.0';
         $xmlEncoding = 'UTF-8';
         $lang = 'fr';
@@ -17,8 +7,19 @@
         $auteur = 'Pierre';
         $css = 'css.css';
         $titre = 'Bienvenue sur ' . $projet;
-        $footer = 'Copyrigth ' . $auteur . " 2014";
+        $footer = '&copy; ' . $auteur . " 2014";
         ?>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="fr" lang="fr">
+      
+    <head>
+        <meta charset="UTF-8">
+        <meta name="author" content="<?php echo $auteur; ?>">
+        <meta name="content-type" content="='xhtml'">
+        <link href="<?php echo $css; ?>" rel="stylesheet" type="text/css" media="screen"/>
+        <title>BDPHILIA</title>
+    </head>
+    <body>
+ 
         <div id="Btop"> 
             <h1><?php echo $titre ?></h1>
             <div id=""Topmenu">
