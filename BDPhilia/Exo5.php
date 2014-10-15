@@ -50,7 +50,16 @@ echo '<?xml version="'.$xmlVersion.'" encoding="'.$xmlEncoding.'"?>';
 	<body>
 		<div id="Btop">
 			<div id="topMenu">
-                            <ul>
+                            <?php
+                            $menuselect = 'index.php';
+                            foreach ($menu as $nomfichier => $menulang) {
+                            $infomenu = $menulang[$lang];
+                            $clas = ($menuselect == $nomfichier) ? 'class = "on"' : '';
+                            $menuafficher .='<li><a href="index.php"'.$class.' title="'.$infomenu['title'].'">'.$infomenu['desc'].'</a></li>'
+                            };
+                            
+                            ?>
+				<ul>
 					<li><a href="index.php" class ="on" title="<?php echo $menu['index.php'][$lang]['title']; ?>"><?php echo $menu['index.php'][$lang]['desc']; ?></a></li>
 					<li><a href="connexion.php" title="<?php echo $menu['connexion.php'][$lang]['title']; ?>"><?php echo $menu['connexion.php'][$lang]['desc']; ?></a></li>
 					<li><a href="rechercheBd.php"  title="<?php echo $menu['rechercheBd.php'][$lang]['title']; ?>"><?php echo $menu['rechercheBd.php'][$lang]['desc']; ?></a></li>
