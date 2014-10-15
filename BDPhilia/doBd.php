@@ -56,11 +56,21 @@
 		'prix' 	=> 18.90,
 		'stock' 	=> 52,
 		'sortie' 	=> 2008);
-        
+        //error handler function
+function customError($errno, $errstr) {
+  echo "<b>Error:</b> [$errno] $errstr";
+}
+
+//set error handler
+set_error_handler("customError");
+
         $ref =@$_POST['ref'];
         
         if ($livres[$ref]['titre'] != '')
-        {echo $livres[$ref]['titre'];}
+        {echo $livres[$ref]['titre'];
+        echo $livres[$ref]['auteur'];
+        }
         else 
-        {echo "Reference inexistante";}
+        {echo " - Reference inexistante";}
+        
          ?>
