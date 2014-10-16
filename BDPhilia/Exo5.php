@@ -52,7 +52,8 @@ echo '<?xml version="'.$xmlVersion.'" encoding="'.$xmlEncoding.'"?>';
 			<div id="topMenu">
                             <?php
                             $menuselect = 'index.php';
-                            foreach ($menu as $nomfichier => $menulang) {
+                            foreach ($menu as $nomfichier => $menulang) 
+                                {
                             $infomenu = $menulang[$lang];
                             $clas = ($menuselect == $nomfichier) ? 'class = "on"' : '';
                             $menuafficher .='<li><a href="index.php"'.$class.' title="'.$infomenu['title'].'">'.$infomenu['desc'].'</a></li>'
